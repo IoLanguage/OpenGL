@@ -128,7 +128,7 @@ IoGLUT *IoGLUT_new(void *state)
 void IoGLUT_free(IoGLUT *self)
 {
 	/* add code to shut down GLUT */
-	free(IoObject_dataPointer(self));
+    free(IoObject_dataPointer(self));
 }
 
 void IoGLUT_mark(IoGLUT *self)

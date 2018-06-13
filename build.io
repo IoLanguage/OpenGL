@@ -12,10 +12,9 @@ AddonBuilder clone do(
     )
 
     if(platform == "darwin",
-        dependsOnLib("glut")
-        /* dependsOnFramework("GLUT") */
+        dependsOnFramework("GLUT")
         dependsOnFramework("OpenGL")
-        /* dependsOnFramework("Carbon") */
+        dependsOnFramework("Carbon")
         dependsOnFramework("Foundation")
     )
 
@@ -34,7 +33,7 @@ AddonBuilder clone do(
     dependsOnBinding("Box")
     dependsOnBinding("Image")
     addDefine("GLEXPORT")
-    dependsOnLinkOption("-Wno-deprecated")
+    /* dependsOnLinkOption("-Wno-deprecated") */
 
     debs    atPut("GL", "libgl1-mesa-dev")
     ebuilds atPut("GL", "mesa")
